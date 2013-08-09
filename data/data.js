@@ -17,3 +17,30 @@ db.saved['Swift VXI/VDI (Bangalore)'] = {
   "diesel_service_cost": 4500,
   "diesel_mileage": 16,
 };
+
+db.saved['Amaze EMT'] = {
+  "petrol_onroad": 590406,
+  "petrol_service_cost": 3600,
+  "petrol_mileage": 13,
+  "diesel_onroad": 713887,
+  "diesel_service_cost": 4500,
+  "diesel_mileage": 20,
+};
+
+db.saved['i20 Magna vs Amaze SMT'] = {
+  "petrol_onroad": 616571,
+  "petrol_service_cost": 3600,
+  "petrol_mileage": 13,
+  "diesel_onroad": 782578,
+  "diesel_service_cost": 5500,
+  "diesel_mileage": 20,
+};
+
+db.saved['Punto Dynamic'] = {
+  "petrol_onroad": 606817,
+  "petrol_service_cost": 3600,
+  "petrol_mileage": 15,
+  "diesel_onroad": 731626,
+  "diesel_service_cost": 5500,
+  "diesel_mileage": 20,
+};
