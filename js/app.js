@@ -84,6 +84,7 @@
 
     $('#saved_list').on('click','a', function(e){
       loadData($(this).text());
+      $('#selected_label').html($(this).text());
       e.preventDefault();
     });
 
