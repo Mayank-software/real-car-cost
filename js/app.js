@@ -25,7 +25,7 @@
     var results = [];
     var pcost = d.petrol_onroad;
     var dcost = d.diesel_onroad;
-    for(var month=12;month<=15*12;month++){
+    for(var month=1;month<=15*12;month++){
       pcost = pcost + fuelCost(d,month, 'petrol') + serviceCost(d,month,'petrol');
       dcost = dcost + fuelCost(d,month, 'diesel') + serviceCost(d,month,'diesel');
       results.push([
