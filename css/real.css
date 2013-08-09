@@ -1,7 +1,7 @@
-body {
+body, h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', sans-serif;
-  overflow-y: scroll;
 }
+body { overflow-y: scroll; }
 h1{  color: #1ca0da; }
 h1,h2 {margin-bottom: 1em;}
 .form-horizontal fieldset {
