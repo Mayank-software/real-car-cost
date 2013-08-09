@@ -25,7 +25,7 @@
     var results = [];
     var pcost = d.petrol_onroad;
     var dcost = d.diesel_onroad;
-    for(var month=13;month<15*12;month++){
+    for(var month=12;month<=15*12;month++){
       pcost = pcost + fuelCost(d,month, 'petrol') + serviceCost(d,month,'petrol');
       dcost = dcost + fuelCost(d,month, 'diesel') + serviceCost(d,month,'diesel');
       results.push([
@@ -61,6 +61,7 @@
   var numberWithCommas = function(x) {
     var r = [];
     var c = 3;
+    x=Math.round(x);
     while(x>0){
       r.push(x%10);
       x=parseInt(x/10);
