@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diesel or Petrol</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/real.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Diesel vs Petrol - Car cost comparison</h1>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#data_entry" data-toggle="tab">
+          Data
+        </a></li>
+        <li><a href="#output" data-toggle="tab" id="projection_tab">
+          Cost Projection
+        </a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="data_entry">
+          <form class="panel">
+            <div class="clearfix">
+              <div class="dropdown pull-right">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Select <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="saved_list">
+
+                </ul>
+              </div>
+            </div>
+            <div class="form-horizontal">
+              <fieldset>
+                <legend>Petrol Variation</legend>
+                <div class="form-group">
+                  <label for="petrol_onroad" class="col-lg-3 control-label">On Road Price</label>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" id="petrol_onroad" placeholder="On Road Price">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="petrol_service_cost" class="col-lg-3 control-label">Average Cost Per Service</label>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" id="petrol_service_cost"
+                        placeholder="Average cost for a single service">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="petrol_mileage" class="col-lg-3 control-label">Average Mileage</label>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" id="petrol_mileage" placeholder="Average mileage">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-horizontal">
+              <fieldset>
+                <legend>Diesel Variation</legend>
+                <div class="form-group">
+                  <label for="diesel_onroad" class="col-lg-3 control-label">On Road Price</label>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" id="diesel_onroad" placeholder="On Road Price">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="diesel_service_cost" class="col-lg-3 control-label">Average Cost Per Service</label>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" id="diesel_service_cost"
+                        placeholder="Average cost for a single service">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="diesel_mileage" class="col-lg-3 control-label">Average Mileage</label>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" id="diesel_mileage" placeholder="Average mileage">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-horizontal">
+              <fieldset>
+                <legend>Fuel Cost</legend>
+                <div class="form-group">
+                  <label for="petrol_price" class="col-lg-3 control-label">Petrol Price</label>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" id="petrol_price" placeholder="Petrol Price" value="75">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="diesel_price" class="col-lg-3 control-label">Diesel Price</label>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" id="diesel_price" placeholder="Diesel Price" value="55">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-horizontal">
+              <fieldset>
+                <legend>Monthly Stats</legend>
+                <div class="form-group">
+                  <label for="month_distance" class="col-lg-3 control-label">Distance per month</label>
+                  <div class="col-lg-4 input-group">
+                    <input type="text" class="form-control" id="monthly_distance" placeholder="KM per month" value="800">
+                    <span class="input-group-addon">KM</span>
+                  </div>
+                  <span class="help-block">Average distance driven per month</span>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-horizontal clearfix">
+              <div class="col-lg-2 col-lg-offset-3">
+                <button type="button" class="btn btn-primary" id="calculate">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="tab-pane" id="output">
+          <table class="table table-striped" id="table-template" style="display:none">
+            <tr>
+              <th>Period</th>
+              <th>Petrol</th>
+              <th>Diesel</th>
+            </tr>
+          </table>
+
+            <h2>Ownership cost projection</h2>
+            <div id="results" class="container col-lg-8">
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--[if lte IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="data/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
