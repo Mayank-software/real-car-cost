@@ -31,6 +31,7 @@
       results.push([
         '<tr class="', dcost <= pcost ? 'success':'','">',
         '<td>', formatMonth(month), '</td>',
+        '<td>', numberWithCommas(d.monthly_distance*month), '</td>',
         '<td>', numberWithCommas(pcost) , '</td>',
         '<td>', numberWithCommas(dcost) , '</td></tr>'
       ].join(''));
