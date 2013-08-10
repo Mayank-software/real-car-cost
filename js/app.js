@@ -14,7 +14,7 @@
   }
 
   var serviceCost = function(d, month, type){
-    if(month > 12 && month % 4 == 0)
+    if(month > 12 && month % 6 == 0)
       return d[type + '_service_cost'];
     return 0;
   }
@@ -33,7 +33,8 @@
         '<td>', formatMonth(month), '</td>',
         '<td>', numberWithCommas(d.monthly_distance*month), '</td>',
         '<td>', numberWithCommas(pcost) , '</td>',
-        '<td>', numberWithCommas(dcost) , '</td></tr>'
+        '<td>', numberWithCommas(dcost) , '</td>',
+        '<td>', numberWithCommas(pcost - dcost) , '</td></tr>'
       ].join(''));
     }
 
@@ -62,7 +63,8 @@
   var numberWithCommas = function(x) {
     var r = [];
     var c = 3;
-    x=Math.round(x);
+    var isNegative = x < 0;
+    x=Math.abs(Math.round(x));
     while(x>0){
       r.push(x%10);
       x=parseInt(x/10);
@@ -72,6 +74,7 @@
         r.push(',');
       }
     }
+    isNegative && r.push('-');
     return r.reverse().join('');
   }
 
