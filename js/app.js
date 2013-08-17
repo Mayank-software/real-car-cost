@@ -95,5 +95,14 @@
       calculate();
       $('#projection_tab').tab('show');
     });
+
+    var index = window.location.href.indexOf('#');
+    if( index> -1){
+      var name = window.location.href.substr(index+1);
+      if(name.length > 3) {
+        loadData(name);
+        $('#calculate').click();
+      }
+    }
   })
 })(jQuery)
