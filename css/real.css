@@ -7,3 +7,10 @@ h1,h2 {margin-bottom: 1em;}
 .form-horizontal fieldset {
   margin-bottom: 2em;
 }
+
+.panel {
+    
+    border-top-style: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
